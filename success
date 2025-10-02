@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Congratulazioni!</title>
+  <style>
+    body{margin:0;height:100%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#fef6ff,#eafffb);font-family:Inter,system-ui,Arial}
+    .wrap{max-width:900px;padding:36px;text-align:center;border-radius:20px;background:linear-gradient(180deg,#fff,#fffefa);box-shadow:0 20px 50px rgba(0,0,0,0.08)}
+    h1{margin:6px 0;font-size:36px;color:#1f2b4a}
+    p{color:#444;margin:8px 0 18px 0}
+    .cup{width:200px;height:200px;margin:18px auto 6px auto}
+    .cta{display:inline-block;margin-top:14px;padding:12px 20px;border-radius:12px;background:linear-gradient(180deg,#ff8bb3,#ff5b86);color:white;text-decoration:none;font-weight:700}
+    /* confetti */
+    .confetti {position:relative;height:120px;margin-top:18px}
+    .dot{position:absolute;width:10px;height:14px;border-radius:2px;animation:fall 1500ms linear infinite}
+    @keyframes fall{0%{transform:translateY(-40px) rotate(0)}100%{transform:translateY(160px) rotate(360deg)}}
+  </style>
+</head>
+<body>
+  <div class="wrap" role="main" aria-labelledby="cong">
+    <div class="confetti" aria-hidden="true">
+      <div class="dot" style="left:6%;background:#ff7aa2;animation-delay:0ms"></div>
+      <div class="dot" style="left:22%;background:#ffd86b;animation-delay:120ms"></div>
+      <div class="dot" style="left:38%;background:#8fe3ff;animation-delay:240ms"></div>
+      <div class="dot" style="left:56%;background:#c9b3ff;animation-delay:60ms"></div>
+      <div class="dot" style="left:74%;background:#b8ffdd;animation-delay:180ms"></div>
+    </div>
+
+    <svg class="cup" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs>
+        <linearGradient id="g2" x1="0" x2="1" y1="0" y2="1">
+          <stop offset="0" stop-color="#ffd86b"/>
+          <stop offset="1" stop-color="#ffb347"/>
+        </linearGradient>
+      </defs>
+      <g transform="translate(4,4) scale(0.9)">
+        <path d="M46 6H18v2a12 12 0 0 0 12 12h4a12 12 0 0 0 12-12V6z" fill="url(#g2)"/>
+        <path d="M48 8v4a16 16 0 0 1-16 16h-4A16 16 0 0 1 12 12V8H10v4a6 6 0 0 0 6 6h1v6a10 10 0 0 1-8 9v3h36v-3a10 10 0 0 1-8-9v-6h1a6 6 0 0 0 6-6V8z" fill="#ffd86b" opacity="0.95"/>
+      </g>
+    </svg>
+
+    <h1 id="cong">Congratulazioni — hai sbloccato la scuola!</h1>
+    <p>Bravissimi: ora potete uscire. Portatevi dietro la prova — avete risolto l'hack con successo.</p>
+
+    <a class="cta" href="#" onclick="window.print();return false">Stampa certificato</a>
+  </div>
+</body>
+</html>
